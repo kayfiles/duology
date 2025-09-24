@@ -119,6 +119,57 @@ body {
   font-size: 1.6rem;
 }
 
+/* shopping cart form */
+.shopping-cart {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: 100vh;
+  width: 35rem;
+  background-color: #fff;
+  color: var(--bg);
+  padding: 0.5rem;
+  transition: 0.4s;
+}
+
+.shopping-cart .cart-item {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed #666;
+  position: relative;
+}
+
+.shopping-cart img {
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.shopping-cart h3 {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.shopping-cart .item-price {
+  font-size: 1.3rem;
+}
+
+.shopping-cart .remove-item {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.shopping-cart .remove-item:hover {
+  color: var(--primary);
+}
+
+.shopping-cart.active {
+  right: 0;
+}
+
 /* hero section */
 .hero {
   min-height: 100vh;
@@ -398,6 +449,82 @@ footer p a:hover {
   color: #fff;
 }
 
+/* modal box */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container {
+  position: relative;
+  width: 80%;
+  background-color: #fff;
+  color: var(--bg);
+  border: 1px solid #666;
+  margin: 15% auto;
+  padding: 1.2rem;
+  animation: animateModal 0.5s;
+}
+
+/* modal animate */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content img {
+  height: 20rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content a {
+  display: flex;
+  width: 12rem;
+  gap: 1rem;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1rem 1.6rem;
+  margin-top: 1.6rem;
+  border-radius: 8px;
+}
+
+.modal-content span {
+  align-items: center;
+  font-size: 1.2rem;
+}
+
 /* media queries */
 
 /* laptop */
@@ -496,6 +623,10 @@ footer p a:hover {
 
   .contact .row form {
     padding-top: 0;
+  }
+
+  .modal-content {
+    flex-wrap: wrap;
   }
 }
 

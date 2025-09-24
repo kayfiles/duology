@@ -31,14 +31,36 @@
 
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
 
+      <!-- search form -->
       <div class="search-form">
         <input type="search" id="search-box" placeholder="search here...">
         <label for="search-box"><i data-feather="search"></i></label>
       </div>
+
+      <!-- cart form start-->
+       <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="asset/produk/1.jpg" alt="kopi">
+          <div class="item-detail">
+            <h3>Premium Arabica</h3>
+            <div class="item-price">Idr 35k</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+          <div class="cart-item">
+          <img src="asset/produk/1.jpg" alt="kopi">
+          <div class="item-detail">
+            <h3>Premium Robusta</h3>
+            <div class="item-price">Idr 35k</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+       </div>
+      <!-- cart form end-->
     </nav>
     <!-- navbar end -->
 
@@ -84,7 +106,7 @@
         <div class="card-menu">
           <div class="produk-icon">
             <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"><i data-feather="eye"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
           <img src="asset/produk/1.jpg" alt="Coffee beans">
         <h3 class="card-title">~ Premium Arabica~</h3>
@@ -101,7 +123,7 @@
        <div class="card-menu">
         <div class="produk-icon">
             <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"><i data-feather="eye"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
           <img src="asset/produk/1.jpg" alt="Coffee beans">
         <h3 class="card-title">~ Premium Robusta~</h3>
@@ -118,7 +140,7 @@
        <div class="card-menu">
         <div class="produk-icon">
             <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"><i data-feather="eye"></i></a>
+            <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
           <img src="asset/produk/1.jpg" alt="Coffee beans">
         <h3 class="card-title">~ House Blend~</h3>
@@ -190,12 +212,37 @@
       <div class="credit">
         <p>
           CopyRight &copy; 2025 -
-          <a href="https://www.instagram.com/ekhoyzether/">ekhoyzether</a>. All
+          <a href="">Duology</a>. All
           Right Reserved.
         </p>
       </div>
     </footer>
+
     <!-- footer section end-->
+
+    <!-- modal section start -->
+     <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="asset/produk/1.jpg" alt="kopi">
+          <div class="produk-content">
+            <h3>Premium Arabica</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, officiis ex? Quia, soluta? Recusandae est quis, quia dicta nam laborum.</p>
+            <div class="produk-star">
+          <i data-feather="star" class="star"></i>
+          <i data-feather="star" class="star"></i>
+          <i data-feather="star" class="star"></i>
+          <i data-feather="star" class="star"></i>
+          <i data-feather="star" class="star"></i>
+        </div>
+        <h4 class="card-price">IDR 35.000</h4>
+        <a href=""><i data-feather="shopping-cart"></i><span>add to cart</span></a>
+          </div>
+        </div>
+      </div>
+     </div>
+    <!-- modal section end -->
     <!-- feather icons script -->
     <script>
       feather.replace();
