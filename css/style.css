@@ -349,6 +349,7 @@ body {
 .service .row .card-menu .produk-icon a {
   color: #fff;
   margin: 1.4rem;
+  border-radius: 1px solid #fff;
 }
 
 .service .row .card-menu .produk-icon a:hover {

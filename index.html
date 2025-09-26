@@ -17,6 +17,13 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- alpinejs -->
+     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+     <!-- app -->
+      <script src="src/app.js"></script>
+
   </head>
   <body>
     <!-- navbar start -->
@@ -43,7 +50,7 @@
 
       <!-- cart form start-->
        <div class="shopping-cart">
-        <div class="cart-item">
+        <!-- <div class="cart-item">
           <img src="asset/produk/1.jpg" alt="kopi">
           <div class="item-detail">
             <h3>Premium Arabica</h3>
@@ -58,7 +65,7 @@
             <div class="item-price">Idr 35k</div>
           </div>
           <i data-feather="trash-2" class="remove-item"></i>
-        </div>
+        </div> -->
        </div>
       <!-- cart form end-->
     </nav>
@@ -98,18 +105,22 @@
     <!-- about section end -->
 
     <!-- service section start -->
-    <section id="product" class="service">
+    <section id="product" class="service" x-data="produk">
       <h2><span>Product</span> Kami</h2>
       <p>WE Offer Different Services To Improve Your Coffeshop</p>
 
       <div class="row">
-        <div class="card-menu">
+       
+        <div class="card-menu"
+          data-name="Premium Arabica" 
+          data-price="35000" 
+          data-img="asset/produk/1.jpg">
           <div class="produk-icon">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
             <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
-          <img src="asset/produk/1.jpg" alt="Coffee beans">
-        <h3 class="card-title">~ Premium Arabica~</h3>
+          <img src="asset/produk/1.jpg" alt="kopi">
+        <h3 class="card-title">Premium Arabica</h3>
         <div class="produk-star">
           <i data-feather="star" class="star"></i>
           <i data-feather="star" class="star"></i>
@@ -117,33 +128,39 @@
           <i data-feather="star" class="star"></i>
           <i data-feather="star" class="star"></i>
         </div>
-        <h4 class="card-price">IDR 35.000 <span>IDR 45.000</span></h4>
+        <h4 class="card-price">IDR 35.000<span>IDR 45.000</span></h4>
       </div>
 
-       <div class="card-menu">
-        <div class="produk-icon">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
+       <div class="card-menu"
+          data-name="Premium Robusta" 
+          data-price="35000" 
+          data-img="asset/produk/2.jpg">
+          <div class="produk-icon">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
             <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
-          <img src="asset/produk/1.jpg" alt="Coffee beans">
-        <h3 class="card-title">~ Premium Robusta~</h3>
+          <img src="asset/produk/2.jpg" alt="kopi">
+        <h3 class="card-title">Premium Robusta</h3>
         <div class="produk-star">
           <i data-feather="star" class="star"></i>
           <i data-feather="star" class="star"></i>
           <i data-feather="star" class="star"></i>
           <i data-feather="star" class="star"></i>
-          <i data-feather="star"></i>
+          <i data-feather="star" class="star"></i>
         </div>
-        <h4 class="card-price">IDR 35.000 <span>IDR 45.000</span></h4>
+        <h4 class="card-price">IDR 35.000<span>IDR 45.000</span></h4>
       </div>
 
-       <div class="card-menu">
-        <div class="produk-icon">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
+       <div class="card-menu"
+        data-name="House Blend" 
+        data-price="40000" 
+        data-img="asset/produk/3.jpg">
+          <div class="produk-icon">
+            <a href="#" class="add-to-cart"><i data-feather="shopping-cart"></i></a>
             <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
           </div>
-          <img src="asset/produk/1.jpg" alt="Coffee beans">
-        <h3 class="card-title">~ House Blend~</h3>
+          <img src="asset/produk/3.jpg" alt="kopi">
+        <h3 class="card-title">House Blend</h3>
         <div class="produk-star">
           <i data-feather="star" class="star"></i>
           <i data-feather="star" class="star"></i>
@@ -151,8 +168,9 @@
           <i data-feather="star" class="star"></i>
           <i data-feather="star" class="star"></i>
         </div>
-        <h4 class="card-price">IDR 35.000 <span>IDR 45.000</span></h4>
+        <h4 class="card-price">IDR 40.000<span>IDR 45.000</span></h4>
       </div>
+     
     </section>
     <!-- service section end -->
 
