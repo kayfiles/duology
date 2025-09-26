@@ -170,6 +170,29 @@ body {
   right: 0;
 }
 
+.shopping-cart .input-grup input {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid;
+  height: 2.8rem;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  background-color: none;
+  color: var(--bg);
+}
+
+.shopping-cart .btn {
+  margin-top: 1.5rem;
+  display: inline-block;
+  padding: 1.2rem 2.2rem;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
 /* hero section */
 .hero {
   min-height: 100vh;
