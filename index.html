@@ -38,7 +38,10 @@
 
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button" class="cart-link">
+          <i data-feather="shopping-cart"></i>
+          <span id="cart-count" class="cart-count-badge">0</span>
+        </a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
 
@@ -57,6 +60,19 @@
             <input type="text" name="alamat" placeholder="Masukan Alamat Pengiriman">
           </div>
           <button type="submit" class="btn" name="submit">Checkout</button>
+
+          <div class="cart-summary" id="cart-summary" style="display: none;">
+            <hr>
+            <div class="summary-row">
+              <span>Total Qty :</span>
+              <span id="total-qty">0</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Total Harga :</span>
+              <span id="total-price">IDR 0</span>
+            </div>
+          </div>
        </div>
       <!-- cart form end-->
     </nav>
